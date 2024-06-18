@@ -1,0 +1,31 @@
+<data:item xmlns:data="data" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="data ../../xsd/alp.xsd" id="gs-motor-control-application-framework" type="general_sw" format="projectfile" versionSchema="1.0.0" name="Motor Control Application Framework">
+    <display_title>
+        LPC553x Motor control application framework
+    </display_title>
+    <overview>
+        <![CDATA[This software introduces framework with peripherals, interrupts and additional resources for developing motor control application with LPC55S3x/553x EVK with NXP low voltage PMSM board. It is easy to port to any custom board and debug by using FreeMASTER tool.   ]]>
+    </overview>
+    <toolchains>
+        <toolchain name="mcux"></toolchain>
+    </toolchains>
+    <families>
+        <family name="lpc"></family>
+    </families>
+    <nxp_compatible_hw>
+        <hw id="LPCXpresso55S36"></hw>
+    </nxp_compatible_hw>
+    <nxp_ebh_hw>
+        <ebh id="nxp_frdm_mc_lvpmsm"></ebh>
+    </nxp_ebh_hw>
+    <peripherals>
+        <peripheral name="adc"></peripheral>
+        <peripheral name="clocks"></peripheral>
+        <peripheral name="gpio"></peripheral>
+        <peripheral name="pwm"></peripheral>
+        <peripheral name="timer"></peripheral>
+        <peripheral name="uart"></peripheral>
+    </peripherals>
+    <categories>
+        <category name="motor_control"></category>
+    </categories>
+</data:item>
