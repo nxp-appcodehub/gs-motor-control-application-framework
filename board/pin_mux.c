@@ -11,7 +11,7 @@ product: Pins v15.0
 processor: LPC55S36
 package_id: LPC55S36JBD100
 mcu_data: ksdk2_0
-processor_version: 15.0.1
+processor_version: 15.1.0
 board: LPCXpresso55S36
 external_user_signals: {}
 pin_labels:
@@ -90,6 +90,8 @@ BOARD_Init_Pins:
   - {pin_num: '23', peripheral: ADC0, signal: 'CH, 8A', pin_signal: PIO0_31/FC0_CTS_SDA_SSEL0/CTIMER0_MAT1/SCT0_OUT3/SECURE_GPIO0_31/AOI0_OUT0/I3C0_SCL/ADC0_8A}
   - {peripheral: ADC0, signal: 'TRIG, 0', pin_signal: PWM0_SM0_MUX_TRIG0}
   - {pin_num: '35', peripheral: HSCMP0, signal: 'IN, 3', pin_signal: PIO1_5/FC0_RXD_SDA_MOSI_DATA/CTIMER2_MAT0/SCT_GPI0/PWM1_A3/TRIGOUT_0/HSCMP0_IN3}
+  - {pin_num: '33', peripheral: SYSCON, signal: XTALIN, pin_signal: XTAL32M_P}
+  - {pin_num: '32', peripheral: SYSCON, signal: XTALOUT, pin_signal: XTAL32M_N}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
  */
 /* clang-format on */

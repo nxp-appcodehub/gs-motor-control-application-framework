@@ -145,7 +145,7 @@ void BOARD_InitBootPins(void);
 #define INIT_PINS_DEBUG_UART_TX_DIRECTION kPIN_MUX_DirectionInput
 /*!
  * @brief PORT peripheral base pointer */
-#define INIT_PINS_DEBUG_UART_TX_PORT 0
+#define INIT_PINS_DEBUG_UART_TX_PORT 0U
 /*!
  * @brief PORT pin number */
 #define INIT_PINS_DEBUG_UART_TX_PIN 30U
@@ -176,7 +176,7 @@ void BOARD_InitBootPins(void);
 #define INIT_PINS_DEBUG_UART_RX_DIRECTION kPIN_MUX_DirectionInput
 /*!
  * @brief PORT peripheral base pointer */
-#define INIT_PINS_DEBUG_UART_RX_PORT 0
+#define INIT_PINS_DEBUG_UART_RX_PORT 0U
 /*!
  * @brief PORT pin number */
 #define INIT_PINS_DEBUG_UART_RX_PIN 29U
@@ -194,7 +194,7 @@ void BOARD_InitBootPins(void);
 #define INIT_PINS_PWM_A0_LABEL "J10[15]/P1_20-ADC1_8A-PWM0_A0" /*!<@brief Label */
 #define INIT_PINS_PWM_A0_NAME "PWM_A0"                         /*!<@brief Identifier */
 #define INIT_PINS_PWM_A0_DIRECTION kPIN_MUX_DirectionOutput    /*!<@brief Direction */
-#define INIT_PINS_PWM_A0_PORT 1                                /*!<@brief PORT peripheral base pointer */
+#define INIT_PINS_PWM_A0_PORT 1U                               /*!<@brief PORT peripheral base pointer */
 #define INIT_PINS_PWM_A0_PIN 20U                               /*!<@brief PORT pin number */
 #define INIT_PINS_PWM_A0_PIN_MASK (1U << 20U)                  /*!<@brief PORT pin mask */
                                                                /* @} */
@@ -208,7 +208,7 @@ void BOARD_InitBootPins(void);
 #define INIT_PINS_PWM_A1_LABEL "J10[11]/P1_6-PWM0_A1"       /*!<@brief Label */
 #define INIT_PINS_PWM_A1_NAME "PWM_A1"                      /*!<@brief Identifier */
 #define INIT_PINS_PWM_A1_DIRECTION kPIN_MUX_DirectionOutput /*!<@brief Direction */
-#define INIT_PINS_PWM_A1_PORT 1                             /*!<@brief PORT peripheral base pointer */
+#define INIT_PINS_PWM_A1_PORT 1U                            /*!<@brief PORT peripheral base pointer */
 #define INIT_PINS_PWM_A1_PIN 6U                             /*!<@brief PORT pin number */
 #define INIT_PINS_PWM_A1_PIN_MASK (1U << 6U)                /*!<@brief PORT pin mask */
                                                             /* @} */
@@ -222,7 +222,7 @@ void BOARD_InitBootPins(void);
 #define INIT_PINS_PWM_B0_LABEL "J10[13]/P1_17-PWM0_B0"      /*!<@brief Label */
 #define INIT_PINS_PWM_B0_NAME "PWM_B0"                      /*!<@brief Identifier */
 #define INIT_PINS_PWM_B0_DIRECTION kPIN_MUX_DirectionOutput /*!<@brief Direction */
-#define INIT_PINS_PWM_B0_PORT 1                             /*!<@brief PORT peripheral base pointer */
+#define INIT_PINS_PWM_B0_PORT 1U                            /*!<@brief PORT peripheral base pointer */
 #define INIT_PINS_PWM_B0_PIN 17U                            /*!<@brief PORT pin number */
 #define INIT_PINS_PWM_B0_PIN_MASK (1U << 17U)               /*!<@brief PORT pin mask */
                                                             /* @} */
@@ -236,7 +236,7 @@ void BOARD_InitBootPins(void);
 #define INIT_PINS_PWM_B2_LABEL "J10[5]/P1_4-PWM0_B2"        /*!<@brief Label */
 #define INIT_PINS_PWM_B2_NAME "PWM_B2"                      /*!<@brief Identifier */
 #define INIT_PINS_PWM_B2_DIRECTION kPIN_MUX_DirectionOutput /*!<@brief Direction */
-#define INIT_PINS_PWM_B2_PORT 1                             /*!<@brief PORT peripheral base pointer */
+#define INIT_PINS_PWM_B2_PORT 1U                            /*!<@brief PORT peripheral base pointer */
 #define INIT_PINS_PWM_B2_PIN 4U                             /*!<@brief PORT pin number */
 #define INIT_PINS_PWM_B2_PIN_MASK (1U << 4U)                /*!<@brief PORT pin mask */
                                                             /* @} */
@@ -266,7 +266,7 @@ void BOARD_InitBootPins(void);
 #define INIT_PINS_PWM_B1_DIRECTION kPIN_MUX_DirectionOutput
 /*!
  * @brief PORT peripheral base pointer */
-#define INIT_PINS_PWM_B1_PORT 1
+#define INIT_PINS_PWM_B1_PORT 1U
 /*!
  * @brief PORT pin number */
 #define INIT_PINS_PWM_B1_PIN 22U
@@ -283,7 +283,7 @@ void BOARD_InitBootPins(void);
 #define INIT_PINS_PWM_A2_PIN_NAME PWM0_A2                   /*!<@brief Routed pin name */
 #define INIT_PINS_PWM_A2_LABEL "J8[1]/P1_8-FC0_CTS-PWM0_A2" /*!<@brief Label */
 #define INIT_PINS_PWM_A2_NAME "PWM_A2"                      /*!<@brief Identifier */
-#define INIT_PINS_PWM_A2_PORT 1                             /*!<@brief PORT peripheral base pointer */
+#define INIT_PINS_PWM_A2_PORT 1U                            /*!<@brief PORT peripheral base pointer */
 #define INIT_PINS_PWM_A2_PIN 8U                             /*!<@brief PORT pin number */
 #define INIT_PINS_PWM_A2_PIN_MASK (1U << 8U)                /*!<@brief PORT pin mask */
                                                             /* @} */
@@ -296,7 +296,7 @@ void BOARD_InitBootPins(void);
 #define INIT_PINS_ADC_VDCB_PIN_NAME ADC0_1A          /*!<@brief Routed pin name */
 #define INIT_PINS_ADC_VDCB_LABEL "VOLT_DCB"          /*!<@brief Label */
 #define INIT_PINS_ADC_VDCB_NAME "ADC_VDCB"           /*!<@brief Identifier */
-#define INIT_PINS_ADC_VDCB_PORT 0                    /*!<@brief PORT peripheral base pointer */
+#define INIT_PINS_ADC_VDCB_PORT 0U                   /*!<@brief PORT peripheral base pointer */
 #define INIT_PINS_ADC_VDCB_PIN 10U                   /*!<@brief PORT pin number */
 #define INIT_PINS_ADC_VDCB_PIN_MASK (1U << 10U)      /*!<@brief PORT pin mask */
                                                      /* @} */
@@ -309,7 +309,7 @@ void BOARD_InitBootPins(void);
 #define INIT_PINS_ADC_CUR_C_PIN_NAME ADC0_3B          /*!<@brief Routed pin name */
 #define INIT_PINS_ADC_CUR_C_LABEL "CUR_C"             /*!<@brief Label */
 #define INIT_PINS_ADC_CUR_C_NAME "ADC_CUR_C"          /*!<@brief Identifier */
-#define INIT_PINS_ADC_CUR_C_PORT 0                    /*!<@brief PORT peripheral base pointer */
+#define INIT_PINS_ADC_CUR_C_PORT 0U                   /*!<@brief PORT peripheral base pointer */
 #define INIT_PINS_ADC_CUR_C_PIN 16U                   /*!<@brief PORT pin number */
 #define INIT_PINS_ADC_CUR_C_PIN_MASK (1U << 16U)      /*!<@brief PORT pin mask */
                                                       /* @} */
@@ -322,7 +322,7 @@ void BOARD_InitBootPins(void);
 #define INIT_PINS_ADC_CUR_B_PIN_NAME ADC0_8B          /*!<@brief Routed pin name */
 #define INIT_PINS_ADC_CUR_B_LABEL "CUR_B"             /*!<@brief Label */
 #define INIT_PINS_ADC_CUR_B_NAME "ADC_CUR_B"          /*!<@brief Identifier */
-#define INIT_PINS_ADC_CUR_B_PORT 0                    /*!<@brief PORT peripheral base pointer */
+#define INIT_PINS_ADC_CUR_B_PORT 0U                   /*!<@brief PORT peripheral base pointer */
 #define INIT_PINS_ADC_CUR_B_PIN 23U                   /*!<@brief PORT pin number */
 #define INIT_PINS_ADC_CUR_B_PIN_MASK (1U << 23U)      /*!<@brief PORT pin mask */
                                                       /* @} */
@@ -335,7 +335,7 @@ void BOARD_InitBootPins(void);
 #define INIT_PINS_ADC_CUR_A_PIN_NAME ADC0_3A          /*!<@brief Routed pin name */
 #define INIT_PINS_ADC_CUR_A_LABEL "CUR_A"             /*!<@brief Label */
 #define INIT_PINS_ADC_CUR_A_NAME "ADC_CUR_A"          /*!<@brief Identifier */
-#define INIT_PINS_ADC_CUR_A_PORT 0                    /*!<@brief PORT peripheral base pointer */
+#define INIT_PINS_ADC_CUR_A_PORT 0U                   /*!<@brief PORT peripheral base pointer */
 #define INIT_PINS_ADC_CUR_A_PIN 15U                   /*!<@brief PORT pin number */
 #define INIT_PINS_ADC_CUR_A_PIN_MASK (1U << 15U)      /*!<@brief PORT pin mask */
                                                       /* @} */
@@ -362,7 +362,7 @@ void BOARD_InitBootPins(void);
 #define INIT_PINS_ENC0_PHA_NAME "ENC0_PHA"
 /*!
  * @brief PORT peripheral base pointer */
-#define INIT_PINS_ENC0_PHA_PORT 0
+#define INIT_PINS_ENC0_PHA_PORT 0U
 /*!
  * @brief PORT pin number */
 #define INIT_PINS_ENC0_PHA_PIN 13U
@@ -393,7 +393,7 @@ void BOARD_InitBootPins(void);
 #define INIT_PINS_ENC0_PHB_NAME "ENC0_PHB"
 /*!
  * @brief PORT peripheral base pointer */
-#define INIT_PINS_ENC0_PHB_PORT 0
+#define INIT_PINS_ENC0_PHB_PORT 0U
 /*!
  * @brief PORT pin number */
 #define INIT_PINS_ENC0_PHB_PIN 14U
@@ -416,7 +416,7 @@ void BOARD_InitBootPins(void);
 #define INIT_PINS_LED_RED_GPIO GPIO                          /*!<@brief GPIO peripheral base pointer */
 #define INIT_PINS_LED_RED_GPIO_PIN 28U                       /*!<@brief GPIO pin number */
 #define INIT_PINS_LED_RED_GPIO_PIN_MASK (1U << 28U)          /*!<@brief GPIO pin mask */
-#define INIT_PINS_LED_RED_PORT 1                             /*!<@brief PORT peripheral base pointer */
+#define INIT_PINS_LED_RED_PORT 1U                            /*!<@brief PORT peripheral base pointer */
 #define INIT_PINS_LED_RED_PIN 28U                            /*!<@brief PORT pin number */
 #define INIT_PINS_LED_RED_PIN_MASK (1U << 28U)               /*!<@brief PORT pin mask */
                                                              /* @} */
@@ -435,7 +435,7 @@ void BOARD_InitBootPins(void);
 #define INIT_PINS_LED_GREEN_GPIO GPIO                          /*!<@brief GPIO peripheral base pointer */
 #define INIT_PINS_LED_GREEN_GPIO_PIN 22U                       /*!<@brief GPIO pin number */
 #define INIT_PINS_LED_GREEN_GPIO_PIN_MASK (1U << 22U)          /*!<@brief GPIO pin mask */
-#define INIT_PINS_LED_GREEN_PORT 0                             /*!<@brief PORT peripheral base pointer */
+#define INIT_PINS_LED_GREEN_PORT 0U                            /*!<@brief PORT peripheral base pointer */
 #define INIT_PINS_LED_GREEN_PIN 22U                            /*!<@brief PORT pin number */
 #define INIT_PINS_LED_GREEN_PIN_MASK (1U << 22U)               /*!<@brief PORT pin mask */
                                                                /* @} */
@@ -448,7 +448,7 @@ void BOARD_InitBootPins(void);
 #define INIT_PINS_SW3_PIN_NAME PIO0_17            /*!<@brief Routed pin name */
 #define INIT_PINS_SW3_LABEL "JP73[2]/J8[2]/P0_17" /*!<@brief Label */
 #define INIT_PINS_SW3_NAME "SW3"                  /*!<@brief Identifier */
-#define INIT_PINS_SW3_PORT 0                      /*!<@brief PORT peripheral base pointer */
+#define INIT_PINS_SW3_PORT 0U                     /*!<@brief PORT peripheral base pointer */
 #define INIT_PINS_SW3_PIN 17U                     /*!<@brief PORT pin number */
 #define INIT_PINS_SW3_PIN_MASK (1U << 17U)        /*!<@brief PORT pin mask */
                                                   /* @} */
@@ -461,7 +461,7 @@ void BOARD_InitBootPins(void);
 #define INIT_PINS_ADC0_8A_PIN_NAME ADC0_8A          /*!<@brief Routed pin name */
 #define INIT_PINS_ADC0_8A_LABEL "P0_31-ADC0_8A"     /*!<@brief Label */
 #define INIT_PINS_ADC0_8A_NAME "ADC0_8A"            /*!<@brief Identifier */
-#define INIT_PINS_ADC0_8A_PORT 0                    /*!<@brief PORT peripheral base pointer */
+#define INIT_PINS_ADC0_8A_PORT 0U                   /*!<@brief PORT peripheral base pointer */
 #define INIT_PINS_ADC0_8A_PIN 31U                   /*!<@brief PORT pin number */
 #define INIT_PINS_ADC0_8A_PIN_MASK (1U << 31U)      /*!<@brief PORT pin mask */
                                                     /* @} */
@@ -474,7 +474,7 @@ void BOARD_InitBootPins(void);
 #define INIT_PINS_HSCMP0_IN3_PIN_NAME HSCMP0_IN3      /*!<@brief Routed pin name */
 #define INIT_PINS_HSCMP0_IN3_LABEL "P1_5-HSCMP0_IN3"  /*!<@brief Label */
 #define INIT_PINS_HSCMP0_IN3_NAME "HSCMP0_IN3"        /*!<@brief Identifier */
-#define INIT_PINS_HSCMP0_IN3_PORT 1                   /*!<@brief PORT peripheral base pointer */
+#define INIT_PINS_HSCMP0_IN3_PORT 1U                  /*!<@brief PORT peripheral base pointer */
 #define INIT_PINS_HSCMP0_IN3_PIN 5U                   /*!<@brief PORT pin number */
 #define INIT_PINS_HSCMP0_IN3_PIN_MASK (1U << 5U)      /*!<@brief PORT pin mask */
                                                       /* @} */

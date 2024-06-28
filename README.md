@@ -29,11 +29,11 @@ Motor control framework was done according to customer requirements for simple a
 
 ## 2. Hardware<a name="step2"></a>
 * [LPCXpresso55S36 Development Board](https://www.nxp.com/design/design-center/software/development-software/mcuxpresso-software-and-tools-/lpcxpresso-boards/lpcxpresso55s36-development-board:LPCXpresso55S36)
-<img src="https://www.nxp.com/assets/images/en/dev-board-image/LPCX55S36-TOP.jpg" width="300"/>
+<img src="images/lpcboard.PNG" width="300"/>
 
 
 * [FRDM-MC-LVPMSM](https://www.nxp.com/design/design-center/development-boards/general-purpose-mcus/nxp-freedom-development-platform-for-low-voltage-3-phase-pmsm-motor-control:FRDM-MC-LVPMSM)
-<img src="https://www.nxp.com/assets/images/en/dev-board-image/FRDM-MC-LVPMSM-BLOCK-DIAGRAM.jpg" width="300"/>
+<img src="images/lvpmsm.PNG" width="300"/>
 
 * Power supply adapter 24-48 VDC
 
@@ -193,5 +193,6 @@ Questions regarding the content/correctness of this example can be entered as Is
 ## 8. Release Notes<a name="step8"></a>
 | Version | Description / Update                           | Date                        |
 |:-------:|------------------------------------------------|----------------------------:|
-| 1.0     | Initial release on Application Code Hub        | March 18<sup>th</sup> 2024 |
+| 1.0     | Initial release on Application Code Hub        | June 18<sup>th</sup> 2024 |
+| 1.1     | Readme update, clock config clean up        | June 28<sup>th</sup> 2024 |
 

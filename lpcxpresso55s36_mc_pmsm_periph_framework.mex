@@ -28,7 +28,7 @@
             <file path="board/pin_mux.h" update_enabled="true"/>
          </generated_project_files>
          <pins_profile>
-            <processor_version>15.0.1</processor_version>
+            <processor_version>15.1.0</processor_version>
             <pin_labels>
                <pin_label pin_num="11" pin_signal="PIO1_20/FC7_RTS_SCL_SSEL1/CT_INP14/FC4_TXD_SCL_MISO_WS/PWM0_A0/AOI0_OUT1/ADC1_8A" label="J10[15]/P1_20-ADC1_8A-PWM0_A0" identifier="PWM_A0"/>
                <pin_label pin_num="4" pin_signal="PIO1_7/FC0_RTS_SCL_SSEL1/CTIMER2_MAT2/SCT_GPI4/AOI1_OUT3/ADC1_3B" label="CUR_C"/>
@@ -91,6 +91,11 @@
                      </feature>
                   </dependency>
                   <dependency resourceType="Peripheral" resourceId="HSCMP0" description="Peripheral HSCMP0 signals are routed in the Pins Tool, but the peripheral is not initialized in the Peripherals Tool." problem_level="1" source="Pins:BOARD_Init_Pins">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="Peripheral" resourceId="SYSCON" description="Peripheral SYSCON signals are routed in the Pins Tool, but the peripheral is not initialized in the Peripherals Tool." problem_level="1" source="Pins:BOARD_Init_Pins">
                      <feature name="initialized" evaluation="equal">
                         <data>true</data>
                      </feature>
@@ -174,6 +179,8 @@
                   <pin peripheral="ADC0" signal="CH, 8A" pin_num="23" pin_signal="PIO0_31/FC0_CTS_SDA_SSEL0/CTIMER0_MAT1/SCT0_OUT3/SECURE_GPIO0_31/AOI0_OUT0/I3C0_SCL/ADC0_8A"/>
                   <pin peripheral="ADC0" signal="TRIG, 0" pin_num="" pin_signal="PWM0_SM0_MUX_TRIG0"/>
                   <pin peripheral="HSCMP0" signal="IN, 3" pin_num="35" pin_signal="PIO1_5/FC0_RXD_SDA_MOSI_DATA/CTIMER2_MAT0/SCT_GPI0/PWM1_A3/TRIGOUT_0/HSCMP0_IN3"/>
+                  <pin peripheral="SYSCON" signal="XTALIN" pin_num="33" pin_signal="XTAL32M_P"/>
+                  <pin peripheral="SYSCON" signal="XTALOUT" pin_num="32" pin_signal="XTAL32M_N"/>
                </pins>
             </function>
          </functions_list>
@@ -185,140 +192,9 @@
             <file path="board/clock_registers.h" update_enabled="true"/>
          </generated_project_files>
          <clocks_profile>
-            <processor_version>15.0.1</processor_version>
+            <processor_version>15.1.0</processor_version>
          </clocks_profile>
          <clock_configurations>
-            <clock_configuration name="BOARD_BootClockFRO12M" id_prefix="" prefix_user_defined="false">
-               <description></description>
-               <options/>
-               <dependencies>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Clocks initialization requires the COMMON Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockFRO12M">
-                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.power" description="Clocks initialization requires the POWER Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockFRO12M">
-                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.clock" description="Clocks initialization requires the CLOCK Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockFRO12M">
-                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-               </dependencies>
-               <clock_sources/>
-               <clock_outputs>
-                  <clock_output id="FRO_12MHz_clock.outFreq" value="12 MHz" locked="false" accuracy=""/>
-                  <clock_output id="System_clock.outFreq" value="12 MHz" locked="false" accuracy=""/>
-               </clock_outputs>
-               <clock_settings/>
-               <called_from_default_init>false</called_from_default_init>
-            </clock_configuration>
-            <clock_configuration name="BOARD_BootClockFROHF96M" id_prefix="" prefix_user_defined="false">
-               <description></description>
-               <options/>
-               <dependencies>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Clocks initialization requires the COMMON Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockFROHF96M">
-                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.power" description="Clocks initialization requires the POWER Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockFROHF96M">
-                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.clock" description="Clocks initialization requires the CLOCK Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockFROHF96M">
-                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-               </dependencies>
-               <clock_sources>
-                  <clock_source id="ANACTRL.fro_hf.outFreq" value="96 MHz" locked="false" enabled="false"/>
-               </clock_sources>
-               <clock_outputs>
-                  <clock_output id="CTIMER0_clock.outFreq" value="96 MHz" locked="false" accuracy=""/>
-                  <clock_output id="FRO_12MHz_clock.outFreq" value="12 MHz" locked="false" accuracy=""/>
-                  <clock_output id="FXCOM0_clock.outFreq" value="48 MHz" locked="false" accuracy=""/>
-                  <clock_output id="System_clock.outFreq" value="96 MHz" locked="false" accuracy=""/>
-               </clock_outputs>
-               <clock_settings>
-                  <setting id="ANALOG_CONTROL_FRO192M_CTRL_ENDI_FRO_96M_CFG" value="Enable" locked="false"/>
-                  <setting id="CTIMER0CLKDIV_HALT" value="Enable" locked="false"/>
-                  <setting id="FLEXCOMM0CLKDIV_HALT" value="Enable" locked="false"/>
-                  <setting id="FROHFDIV_HALT" value="Enable" locked="false"/>
-                  <setting id="SYSCON.CTIMERCLKSEL0.sel" value="SYSCON.MAINCLKSELB" locked="false"/>
-                  <setting id="SYSCON.FCCLKDIV0.scale" value="2" locked="false"/>
-                  <setting id="SYSCON.FCCLKDIV1.scale" value="2" locked="false"/>
-                  <setting id="SYSCON.FCCLKSEL0.sel" value="SYSCON.FROHFDIV" locked="false"/>
-                  <setting id="SYSCON.MAINCLKSELA.sel" value="ANACTRL.fro_hf_clk" locked="false"/>
-               </clock_settings>
-               <called_from_default_init>false</called_from_default_init>
-            </clock_configuration>
-            <clock_configuration name="BOARD_BootClockPLL100M" id_prefix="" prefix_user_defined="false">
-               <description></description>
-               <options/>
-               <dependencies>
-                  <dependency resourceType="PinSignal" resourceId="SYSCON.XTALIN" description="&apos;XTALIN&apos; (Pins tool id: SYSCON.XTALIN, Clocks tool id: SYSCON.XTALIN) needs to be routed" problem_level="1" source="Clocks:BOARD_BootClockPLL100M">
-                     <feature name="routed" evaluation="">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="PinSignal" resourceId="SYSCON.XTALIN" description="&apos;XTALIN&apos; (Pins tool id: SYSCON.XTALIN, Clocks tool id: SYSCON.XTALIN) needs to have &apos;INPUT&apos; direction" problem_level="1" source="Clocks:BOARD_BootClockPLL100M">
-                     <feature name="direction" evaluation="">
-                        <data>INPUT</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="PinSignal" resourceId="SYSCON.XTALOUT" description="&apos;XTALOUT&apos; (Pins tool id: SYSCON.XTALOUT, Clocks tool id: SYSCON.XTALOUT) needs to be routed" problem_level="1" source="Clocks:BOARD_BootClockPLL100M">
-                     <feature name="routed" evaluation="">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="PinSignal" resourceId="SYSCON.XTALOUT" description="&apos;XTALOUT&apos; (Pins tool id: SYSCON.XTALOUT, Clocks tool id: SYSCON.XTALOUT) needs to have &apos;OUTPUT&apos; direction" problem_level="1" source="Clocks:BOARD_BootClockPLL100M">
-                     <feature name="direction" evaluation="">
-                        <data>OUTPUT</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Clocks initialization requires the COMMON Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockPLL100M">
-                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.power" description="Clocks initialization requires the POWER Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockPLL100M">
-                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.clock" description="Clocks initialization requires the CLOCK Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockPLL100M">
-                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-               </dependencies>
-               <clock_sources>
-                  <clock_source id="ANACTRL.fro_hf.outFreq" value="96 MHz" locked="false" enabled="false"/>
-                  <clock_source id="SYSCON.XTAL.outFreq" value="16 MHz" locked="false" enabled="true"/>
-               </clock_sources>
-               <clock_outputs>
-                  <clock_output id="FRO_12MHz_clock.outFreq" value="12 MHz" locked="false" accuracy=""/>
-                  <clock_output id="System_clock.outFreq" value="100 MHz" locked="false" accuracy=""/>
-               </clock_outputs>
-               <clock_settings>
-                  <setting id="PLL0_Mode" value="Normal" locked="false"/>
-                  <setting id="ANALOG_CONTROL_FRO192M_CTRL_ENDI_FRO_96M_CFG" value="Enable" locked="false"/>
-                  <setting id="ENABLE_CLKIN_ENA" value="Enabled" locked="false"/>
-                  <setting id="ENABLE_SYSTEM_CLK_OUT" value="Enabled" locked="false"/>
-                  <setting id="SYSCON.MAINCLKSELB.sel" value="SYSCON.PLL0_BYPASS" locked="false"/>
-                  <setting id="SYSCON.PLL0CLKSEL.sel" value="SYSCON.CLK_IN_EN" locked="false"/>
-                  <setting id="SYSCON.PLL0M_MULT.scale" value="100" locked="true"/>
-                  <setting id="SYSCON.PLL0N_DIV.scale" value="4" locked="true"/>
-                  <setting id="SYSCON.PLL0_PDEC.scale" value="4" locked="true"/>
-               </clock_settings>
-               <called_from_default_init>false</called_from_default_init>
-            </clock_configuration>
             <clock_configuration name="BOARD_BootClockPLL150M" id_prefix="" prefix_user_defined="false">
                <description></description>
                <options/>
@@ -388,65 +264,6 @@
                   <setting id="SYSCON.PLL0_PDEC.scale" value="2" locked="true"/>
                </clock_settings>
                <called_from_default_init>true</called_from_default_init>
-            </clock_configuration>
-            <clock_configuration name="BOARD_BootClockPLL1_150M" id_prefix="" prefix_user_defined="false">
-               <description></description>
-               <options/>
-               <dependencies>
-                  <dependency resourceType="PinSignal" resourceId="SYSCON.XTALIN" description="&apos;XTALIN&apos; (Pins tool id: SYSCON.XTALIN, Clocks tool id: SYSCON.XTALIN) needs to be routed" problem_level="1" source="Clocks:BOARD_BootClockPLL1_150M">
-                     <feature name="routed" evaluation="">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="PinSignal" resourceId="SYSCON.XTALIN" description="&apos;XTALIN&apos; (Pins tool id: SYSCON.XTALIN, Clocks tool id: SYSCON.XTALIN) needs to have &apos;INPUT&apos; direction" problem_level="1" source="Clocks:BOARD_BootClockPLL1_150M">
-                     <feature name="direction" evaluation="">
-                        <data>INPUT</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="PinSignal" resourceId="SYSCON.XTALOUT" description="&apos;XTALOUT&apos; (Pins tool id: SYSCON.XTALOUT, Clocks tool id: SYSCON.XTALOUT) needs to be routed" problem_level="1" source="Clocks:BOARD_BootClockPLL1_150M">
-                     <feature name="routed" evaluation="">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="PinSignal" resourceId="SYSCON.XTALOUT" description="&apos;XTALOUT&apos; (Pins tool id: SYSCON.XTALOUT, Clocks tool id: SYSCON.XTALOUT) needs to have &apos;OUTPUT&apos; direction" problem_level="1" source="Clocks:BOARD_BootClockPLL1_150M">
-                     <feature name="direction" evaluation="">
-                        <data>OUTPUT</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Clocks initialization requires the COMMON Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockPLL1_150M">
-                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.power" description="Clocks initialization requires the POWER Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockPLL1_150M">
-                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.clock" description="Clocks initialization requires the CLOCK Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockPLL1_150M">
-                     <feature name="enabled" evaluation="equal" configuration="cm33_core0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-               </dependencies>
-               <clock_sources>
-                  <clock_source id="SYSCON.XTAL.outFreq" value="16 MHz" locked="false" enabled="true"/>
-               </clock_sources>
-               <clock_outputs>
-                  <clock_output id="FRO_12MHz_clock.outFreq" value="12 MHz" locked="false" accuracy=""/>
-                  <clock_output id="System_clock.outFreq" value="150 MHz" locked="false" accuracy=""/>
-               </clock_outputs>
-               <clock_settings>
-                  <setting id="PLL1_Mode" value="Normal" locked="false"/>
-                  <setting id="ENABLE_CLKIN_ENA" value="Enabled" locked="false"/>
-                  <setting id="ENABLE_SYSTEM_CLK_OUT" value="Enabled" locked="false"/>
-                  <setting id="SYSCON.MAINCLKSELB.sel" value="SYSCON.PLL1_BYPASS" locked="false"/>
-                  <setting id="SYSCON.PLL1CLKSEL.sel" value="SYSCON.CLK_IN_EN" locked="false"/>
-                  <setting id="SYSCON.PLL1M_MULT.scale" value="150" locked="true"/>
-                  <setting id="SYSCON.PLL1N_DIV.scale" value="8" locked="true"/>
-                  <setting id="SYSCON.PLL1_PDEC.scale" value="2" locked="true"/>
-               </clock_settings>
-               <called_from_default_init>false</called_from_default_init>
             </clock_configuration>
          </clock_configurations>
       </clocks>
