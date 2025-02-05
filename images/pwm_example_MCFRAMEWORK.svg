@@ -58,11 +58,11 @@
 		</g>
 		<g id="shape7-22" v:mID="7" v:groupContext="shape" transform="translate(0.375,-21.9311)">
 			<title>Sheet.7</title>
-			<desc>VAL0=-MOD/2</desc>
+			<desc>INIT=-MOD/2</desc>
 			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
 			<v:textRect cx="42.5197" cy="145.692" width="85.04" height="20"/>
 			<rect x="0" y="135.692" width="85.0394" height="20" class="st5"/>
-			<text x="10.21" y="149.29" class="st6" v:langID="1033"><v:paragraph v:horizAlign="2"/><v:tabList/>VAL0=-MOD/2</text>		</g>
+			<text x="15.44" y="149.29" class="st6" v:langID="1033"><v:paragraph v:horizAlign="2"/><v:tabList/>INIT=-MOD/2</text>		</g>
 		<g id="shape9-25" v:mID="9" v:groupContext="shape" transform="translate(0.375,-135.317)">
 			<title>Sheet.9</title>
 			<desc>VAL1=MOD/2-1</desc>

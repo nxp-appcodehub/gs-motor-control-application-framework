@@ -195,4 +195,5 @@ Questions regarding the content/correctness of this example can be entered as Is
 |:-------:|------------------------------------------------|----------------------------:|
 | 1.0     | Initial release on Application Code Hub        | June 18<sup>th</sup> 2024 |
 | 1.1     | Readme update, clock config clean up        | June 28<sup>th</sup> 2024 |
+| 1.2     | Readme PWM picture fix        | Feb 4<sup>th</sup> 2025 |
 
