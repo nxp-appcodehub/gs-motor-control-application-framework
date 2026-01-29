@@ -1,4 +1,4 @@
-Debug/
+
 source/exported_registers.h.bak
 board/clock_config.c.bak
 board/pin_mux.c.bak
